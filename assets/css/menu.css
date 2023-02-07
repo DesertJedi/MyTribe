@@ -3,6 +3,8 @@
     background: linear-gradient(to bottom,  #0099CC,  #006B8F);
     color: #FFF;
     height: 24px;
+    width: 35%;
+    float: right;
     padding-left: 18px;
     border-radius: 35px;
 }
@@ -34,6 +36,8 @@
 #menu li a:hover {
     color: #0099CC;
     background: #F2F2F2;
+    border-radius: 30px;
+
 }
 #menu input {
     display: none;
