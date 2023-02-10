@@ -1,0 +1,174 @@
+/*Color palettes:*/
+/*Teal: #60dcd4*/
+/*Teal 2: #87FFF6FF*/
+/*Teal 3: #60dcd4*/
+/*Pastel Pink: #d8a5a5*/
+/*Pastel Pink 2: #d4b9b9*/
+/*Light Pink: #fef8f8*/
+/*Light Pink 2: #fbbfbf*/
+/*Grey: #77767b*/
+
+/*TODO: Make color scheme toggle - Pink, Teal, Dark. */
+/*Pink Gradient*/
+/*background-image: linear-gradient(#d4b9b9, #fbbfbf);*/
+
+/*Teal Gradient*/
+/*background-image: linear-gradient(#87FFF6FF, #60dcd4);*/
+
+/*begin overrides*/
+
+p {
+    font-family: Arial;
+}
+
+body{
+    background-image: linear-gradient(#87FFF6FF, #60dcd4);
+    /*background-color: #d8a5a5;*/
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: .4em;
+}
+
+/*end overrides*/
+
+#page-header{
+    /*width: 100%;*/
+
+}
+
+#site-logo{
+
+}
+#site-logo-text{
+    color: #444444;
+}
+
+/*begin anti-ad */
+.anti-ad{
+    margin-top: 1em;
+    width: auto;
+}
+
+.anti-ad-header{
+    font-size: small;
+    text-align: center;
+    border-bottom: 1px;
+    border-bottom-color: #006B8F;
+    border-bottom-style: solid;
+    margin-bottom: .4em;
+    padding-bottom: .2em;
+    margin-top: 5em;
+}
+
+.anti-ad-text{
+    font-size: medium;
+}
+/*end anti-ad*/
+
+#sticky-right{
+    float: right;
+    /*display: block;*/
+    top: 0;
+    width: 10em;
+    height: 50em;
+    z-index: 99;
+}
+
+#menu{
+    position: sticky;
+    top: 0;
+    text-align: right;
+}
+
+#recent_tribe_updates{
+    position: absolute;
+    /*display: inline;*/
+    left: .5em;
+    top: .5em;
+    /*display: inline;*/
+    /*top: 22em;*/
+    z-index: 1;
+    /*width: auto;*/
+    height: auto;
+    width: auto;
+}
+/*end page content*/
+
+/*begin tribe recent photo carousel*/
+.recent-tribe-updates {
+    margin-top: 5em;
+    margin-bottom: 30px;
+    /*width: 60%;*/
+    /*display: block;*/
+    margin-left: 1em;
+}
+.tribe-update-card-row{
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.tribe-update-card {
+    /*margin-bottom: 1em;*/
+    /*margin: 1em;*/
+    display: block;
+    /*height: 12em;*/
+    /*width: 12em;*/
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0b2e13;
+    border-radius: 1em;
+}
+.tribe-update-card img {
+    width: 100%;
+}
+
+.card-photo{
+    /*width: 99%;*/
+    /*height: 99%;*/
+    padding: .5em;
+}
+
+.details {
+    padding-top: 6px;
+    /*padding-left: 1em;*/
+    color: #373b37;
+    text-align: center;
+}
+.details h6 a {
+    font-size: .9rem;
+    font-family: "Glacial Indifference", "Open Sans", sans-serif;
+    margin-top: 3px;
+}
+.details .left {
+    font-size: .85rem;
+}
+.details .right {
+    font-size: .85rem;
+}
+.details .right .fa-eye {
+    color: #2365a2;
+}
+.details i {
+    font-size: .8rem;
+}
+
+
+.tribe-update-card-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 2em; /* move card title left to right depending on what will look good with rest of content */
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #373b37;
+    width: 75%;
+}
+.tribe-update-card-title h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Glacial Indifference", "Open Sans", sans-serif;
+}
+.tribe-update-card-title-text{
+    /*text-align: center;*/
+}
+/*end tribe recent photo carousel*/
