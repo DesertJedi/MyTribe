@@ -1,13 +1,14 @@
 #menu {
     /*background: #0099CC;*/
     /*background: linear-gradient(to bottom, #12c4c8, #11aac8);*/
-    color: #000;
+    color: #77767b;
     height: 45px;
     /*width: 68%;*/
     right: 1em;
     top: 1em;
     padding-left: 18px;
     border-radius: 35px;
+    z-index: 1;
 }
 #menu ul, #menu li {
     margin: 0 auto;
@@ -68,7 +69,7 @@
     /*background-image: linear-gradient(to bottom, #12c4c8, #11aac8);*/
     position: relative;
     right: 10em;
-    z-index: 99;
+    z-index: auto;
     display: none;
 }
 #menu ul.sub-menus li {

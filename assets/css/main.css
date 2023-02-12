@@ -1,3 +1,20 @@
+/*Color palettes:*/
+/*Teal: #60dcd4*/
+/*Teal 2: #87FFF6FF*/
+/*Teal 3: #60dcd4*/
+/*Pastel Pink: #d8a5a5*/
+/*Pastel Pink 2: #d4b9b9*/
+/*Light Pink: #fef8f8*/
+/*Light Pink 2: #fbbfbf*/
+/*Grey: #77767b*/
+
+/*TODO: Make color scheme toggle - Pink, Teal, Dark. */
+/*Pink Gradient*/
+/*background-image: linear-gradient(#d4b9b9, #fbbfbf);*/
+
+/*Teal Gradient*/
+/*background-image: linear-gradient(#87FFF6FF, #60dcd4);*/
+
 /*begin overrides*/
 
 p {
@@ -5,8 +22,8 @@ p {
 }
 
 body{
-    /*background-image: linear-gradient(to bottom, #91d1c8, #60dcd4);*/
-    background-color: #91d1c8;
+    background-image: linear-gradient(#87FFF6FF, #60dcd4);
+    /*background-color: #d8a5a5;*/
 }
 
 li {
@@ -22,16 +39,16 @@ li {
 }
 
 #site-logo{
-    /*background-image: linear-gradient(to bottom, #12c4c8, #11aac8);*/
-    position: relative;
-    height: 3em;
-    color: #ffffff;
+
+}
+#site-logo-text{
+    color: #444444;
 }
 
 /*begin anti-ad */
 .anti-ad{
-    width: 70%;
-    /*float: right;*/
+    margin-top: 1em;
+    width: auto;
 }
 
 .anti-ad-header{
@@ -42,54 +59,40 @@ li {
     border-bottom-style: solid;
     margin-bottom: .4em;
     padding-bottom: .2em;
+    margin-top: 5em;
 }
 
 .anti-ad-text{
     font-size: medium;
-    text-align: center;
 }
 /*end anti-ad*/
 
-/*begin page content*/
-/*.section-wrapper{*/
-/*    position: absolute;*/
-/*    width: 95%;*/
-/*    margin-top: 5em;*/
-/*}*/
-
-#site-logo{
-    color: #000000;
-    padding-left: 2em;
-}
-
 #sticky-right{
+    float: right;
+    /*display: block;*/
+    top: 0;
+    width: 10em;
+    height: 50em;
+    z-index: 99;
+}
+
+#menu{
     position: sticky;
-    float: right;
-    top: 5em;
-    width: 15%;
-}
-
-/*#page_main{*/
-/*    position: absolute;*/
-/*    !*left: 1em;*!*/
-/*    margin-left: 5em;*/
-/*    margin-right: 1em;*/
-/*    margin-bottom: 2em;*/
-/*    height: 200em;*/
-/*    width: 100%;*/
-/*}*/
-
-#page_right_wrapper{
-    position: relative;
-    float: right;
-    /*right: 1em;*/
-    vertical-align: top;
-    margin-left: 1em;
-}
-
-#page_right_section{
-    width: 100%;
+    top: 0;
     text-align: right;
+}
+
+#recent_tribe_updates{
+    position: absolute;
+    /*display: inline;*/
+    left: .5em;
+    top: .5em;
+    /*display: inline;*/
+    /*top: 22em;*/
+    z-index: 1;
+    /*width: auto;*/
+    height: auto;
+    width: auto;
 }
 /*end page content*/
 
@@ -168,6 +171,4 @@ li {
 .tribe-update-card-title-text{
     /*text-align: center;*/
 }
-
-
 /*end tribe recent photo carousel*/
