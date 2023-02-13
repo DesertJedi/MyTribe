@@ -11,6 +11,7 @@
 #accordion{
     border-top: 1px solid;
     margin-top: 5em;
+    font-size: 15px;
 }
 
 #accordion a {
@@ -26,7 +27,7 @@
     display: block;
     /*padding: 2em;*/
     color: #1a1a1a;
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-weight: 100;
     position: relative;
     -webkit-transition: all 0.4s ease;
@@ -93,7 +94,7 @@
 
 .submenu li {
     border-bottom: 1px solid #4b4a5e;
-    font-size: 11px;
+    font-size: 14px;
     color: #333333;
 }
 
