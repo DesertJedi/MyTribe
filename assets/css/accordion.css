@@ -8,13 +8,18 @@
     border-radius: 0px;
 }
 
+#accordion{
+    border-top: 1px solid;
+    margin-top: 5em;
+}
+
 .accordion .link {
     cursor: pointer;
     display: block;
-    padding: 65px 15px 30px 42px;
+    /*padding: 2em;*/
     color: #1a1a1a;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 100;
     position: relative;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -24,10 +29,11 @@
 .accordion li:last-child .link { border-bottom: 0; }
 
 .accordion li i {
-    position: absolute;
+    /*position: absolute;*/
+    /*display: inline;*/
     top: 16px;
     left: 12px;
-    font-size: 18px;
+    font-size: 14px;
     color: #1a1a1a;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -37,7 +43,7 @@
 .accordion li i.fa-chevron-down {
     right: 12px;
     left: auto;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .accordion li.open .link { color: #872b2b; }

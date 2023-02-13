@@ -51,7 +51,7 @@
             <ul class='accordion' id='accordion'>
                 <li>
                     <div class='link'>
-                        <p>Chats</p><i style="padding-top: 6%;" class="fa fa-chevron-down"></i>
+                        <i class="fa fa-chevron-down"></i> Chats
                     </div>
                     <ul class='submenu'> <!-- using li like below is not required can be p -->
                         <li>Chat 1</li>
@@ -61,7 +61,7 @@
                 </li>
                 <li>
                     <div class='link'>
-                        <p>Accordion 2</p><i style="padding-top: 6%;" class="fa fa-chevron-down"></i>
+                        <p>Accordion 2<i class="fa fa-chevron-down"></i></p>
                     </div>
                     <ul class='submenu'>
                         <p>Just a bunch of random shit</p>
