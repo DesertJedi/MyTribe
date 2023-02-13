@@ -28,7 +28,7 @@ body{
     background-size: cover;
     /*background-image: linear-gradient(#050d2b, #60dcd4);*/
     border: 10px solid transparent;
-    padding: 15px;
+    padding: .5em;
     /*border-image: url('/assets/images/border2.png') 50 round;*/
 
 }
@@ -40,43 +40,31 @@ li {
 
 /*end overrides*/
 
-#page-header{
-    /*width: 100%;*/
-
-}
-
-#site-logo{
-
-}
-#site-logo-text{
-    color: #444444;
-}
-
 /*begin anti-ad */
-#anti-ad{
-    margin-top: 1em;
-    width: auto;
+#antiad {
+    border: 1px solid #111111;
+    border-radius: 2%;
 }
 
 #antiad-header-text{
-    font-size: small;
+    font-size: 14px;
     text-align: center;
     border-bottom: 1px;
-    border-bottom-color: #006B8F;
+    border-bottom-color: #333333;
     border-bottom-style: solid;
-    margin-bottom: .4em;
-    padding-bottom: .2em;
-    margin-top: 5em;
-    color: #444444;
+    padding: .5em;
+    color: #333333;
 }
 
 #antiad-ad-text{
-    font-size: medium;
+    font-size: 13px;
     text-align: center;
-    color: #444444;
+    padding: .5em;
+    color: #333333;
 }
 /*end anti-ad*/
 
+/* begin right-side stuff */
 #sticky-right{
     float: right;
     /*top: 15em;*/ /* doesnt change shit */
@@ -90,9 +78,11 @@ li {
     position: sticky;
     top: 15em;
     text-align: right;
-    padding-right: 1em;
+    /*padding-right: 1em;*/
 }
+/* end right-side stuff */
 
+/* begin recent tribe update cards */
 #recent_tribe_updates{
     position: absolute;
     left: .5em;
@@ -101,9 +91,6 @@ li {
     height: auto;
     width: auto;
 }
-/*end page content*/
-
-/*begin tribe recent photo carousel*/
 .recent-tribe-updates {
     margin-top: 5em;
     margin-bottom: 30px;
@@ -169,4 +156,4 @@ li {
 .tribe-update-card-title-text{
 
 }
-/*end tribe recent photo carousel*/
+/* end recent tribe update cards */

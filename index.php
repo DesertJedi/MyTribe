@@ -26,9 +26,9 @@
             <ul class='accordion' id='accordion' style='border: 0;'>
                 <!-- TODO: When between phone width and half width not all icons are showing - make a few different view sizes so everything can be seen at any width -->
                 <!-- TODO: Scrolling from expanded Events to Groups goes past Groups so it doesn't expand - maybe fix -->
-                <div style='border-bottom: 1px solid #333333'><a href='http://'>My Tribe <i class='fa fa-earth'></i></a></div>
+                <div style='border-bottom: 1px solid #333333; width: 90%;'><a href='http://'>My Tribe <i class='fa fa-earth'></i></a></div>
                     <div class='link'>
-                        <i class="fa fa-chevron-down"></i>  Gatherings
+                        <i class="fa fa-drum"><span class='accordion_icon_text'> &nbsp;Gatherings</span></i>
                     </div>
                     <ul class='submenu'>
                         <li>My Gatherings</li>
@@ -36,14 +36,14 @@
                         <li>Search Gatherings</li>
                     </ul>
                     <div class='link'>
-                        <i class='fa fa-chevron-down' href='http://'></i>  Groups
+                        <i class='fa fa-people-group' href='http://'> <span class='accordion_icon_text'> Groups</span></i>
                     </div>
                     <ul class='submenu'>
                         <li>My Groups</li>
                         <li>Search <Groups></Groups></li>
                     </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-message'></i>  Chats
+                    <i class='fa-solid fa-message'><span class='accordion_icon_text'> &nbsp;Chats</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>Chat 1</li>
@@ -51,20 +51,25 @@
                     <li>Chat 3</li>
                 </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-user-astronaut'></i>  My Profile
+                    <i class='fa-solid fa-user-astronaut'><span class='accordion_icon_text'> &nbsp;My Profile</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>View Profile</li>
                     <li>Edit Profile</li>
                 </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-hand-peace'></i>  Peace Out
+                    <i class='fa-solid fa-hand-peace'><span class='accordion_icon_text'> &nbsp;Peace Out</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>Sign Out</li>
                     <li>Switch Accounts</li>
                 </ul>
             </ul>
+            <br />
+            <div id='antiad'>
+                <div id='antiad-header-text'>Affirmation for Happiness</div>
+                <div id='antiad-ad-text'>My happiness is reflected back to me in everything I attract.</div>
+            </div>
         </nav>
     </div>
     <ul class="cards">

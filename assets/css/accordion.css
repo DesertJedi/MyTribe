@@ -26,6 +26,7 @@
     cursor: pointer;
     display: block;
     /*padding: 2em;*/
+    padding-top: .5em;
     color: #1a1a1a;
     /*font-size: 14px;*/
     font-weight: 100;
@@ -40,6 +41,16 @@
     background: #F2F2F2;
     border-radius: 30px;
 }
+
+.accordion_icon_text {
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 100;
+}
+.accordion_icon_text:hover {
+    color: #0099CC;
+}
+
 
 .accordion li {
     color: #1a1a1a;
@@ -86,7 +97,7 @@
     /*background: #eeeeee;*/
     /*font-size: 11px;*/
     text-align: left;
-    /*padding-top: 3%;*/
+    padding-top: .5em;
     /*padding-bottom: 2%;*/
     /*padding-left: 1em;*/
     /*padding-right: 3%;*/
@@ -94,7 +105,7 @@
 
 .submenu li {
     border-bottom: 1px solid #4b4a5e;
-    font-size: 14px;
+    font-size: 12px;
     color: #333333;
 }
 
