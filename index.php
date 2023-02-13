@@ -3,16 +3,20 @@
 <meta charset='UTF-8'>
 <title>My Tribe</title>
 <head>
-    <link rel='stylesheet' href='assets/css/main.css'>
-    <link rel='stylesheet' href='assets/css/menu.css'>
-    <link rel='stylesheet' href='assets/css/cards.css'>
     <link href='vendor/fontawesome/css/fontawesome.css' rel='stylesheet'>
     <link href='vendor/fontawesome/css/regular.css' rel='stylesheet'>
     <link href='vendor/fontawesome/css/solid.css' rel='stylesheet'>
     <link href='vendor/fontawesome/css/brands.css' rel='stylesheet'>
     <link href='vendor/bootstrap/bootstrap.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='assets/css/webkits.css'>
+    <link rel='stylesheet' href='assets/css/main.css'>
+    <link rel='stylesheet' href='assets/css/menu.css'>
+    <link rel='stylesheet' href='assets/css/accordion.css'>
+    <link rel='stylesheet' href='assets/css/cards.css'>
 
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src='assets/js/main.js'></script>
+    <script src='assets/js/accordion.js'></script>
 </head>
 <body>
     <div id='sticky-right'>
@@ -23,15 +27,15 @@
                 <!-- TODO: When between phone width and half width not all icons are showing - make a few different view sizes so everything can be seen at any width -->
                 <!-- TODO: Scrolling from expanded Events to Groups goes past Groups so it doesn't expand - maybe fix -->
                 <li><a href='http://'>My Tribe<i class='fa-solid fa-joint navmenu_icons'></i></a></li> <!-- this is the new "Home" link -->
-                <li><a class='dropdown-arrow' href='http://'>Events & Gatherings</a>
-                    <ul class='sub-menus'>
-                        <li><a href='http://'>My Events/Gatherings</a></li>
-                        <li><a href='http://'>New Events/Gatherings</a></li>
-                        <li><a href='http://'>Search Events/Gatherings</a></li>
+                <li><a class='dropdown-arrow' href='http://'>Gatherings</a>
+                    <ul class='sub-menus slide-left'>
+                        <li><a href='http://'>My Gatherings</a></li>
+                        <li><a href='http://'>New Gatherings</a></li>
+                        <li><a href='http://'>Search Gatherings</a></li>
                     </ul>
                 </li>
                 <li><a class='dropdown-arrow' href='http://'>Groups</a>
-                    <ul class='sub-menus'>
+                    <ul class='sub-menus slide-left'>
                         <li><a href='http://'>My Groups</a></li>
                         <li><a href='http://'>Search Groups</a></li>
                     </ul>
@@ -40,10 +44,30 @@
                 <li><a href='http://'>My Profile<i class='fa-solid navmenu_icons fa-user-astronaut'></i></a></li>
                 <li><a href='http://'>Peace Out<i class='fa-solid navmenu_icons fa-hand-peace'></i></a></li>
             </ul>
-            <div class='anti-ad'>
-                <div id='antiad-header-text'>Affirmation for Happiness</div>
-                <div id='antiad-ad-text'>I am allowing myself to feel good.</div>
-            </div>
+<!--            <div id='anti-ad'>-->
+<!--                <div id='antiad-header-text'>Affirmation for Happiness</div>-->
+<!--                <div id='antiad-ad-text'>I am allowing myself to feel good.</div>-->
+<!--            </div>-->
+            <ul class='accordion' id='accordion'>
+                <li>
+                    <div class='link'>
+                        <p>Chats</p><i style="padding-top: 6%;" class="fa fa-chevron-down"></i>
+                    </div>
+                    <ul class='submenu'> <!-- using li like below is not required can be p -->
+                        <li>Chat 1</li>
+                        <li>Chat 2</li>
+                        <li>Chat 3</li>
+                    </ul>
+                </li>
+                <li>
+                    <div class='link'>
+                        <p>Accordion 2</p><i style="padding-top: 6%;" class="fa fa-chevron-down"></i>
+                    </div>
+                    <ul class='submenu'>
+                        <p>Just a bunch of random shit</p>
+                    </ul>
+                </li>
+            </ul>
         </nav>
     </div>
     <ul class="cards">

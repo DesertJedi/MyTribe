@@ -19,7 +19,6 @@ body {
     margin: 4rem 5vw;
     padding: 0;
     list-style-type: none;
-    z-index: -1;
 }
 
 .card {
@@ -41,7 +40,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    /*z-index: 1;*/
     border-radius: calc(var(--curve) * 1px);
     background-color: var(--surface-color);
     transform: translateY(100%);
@@ -70,7 +69,7 @@ body {
     position: absolute;
     bottom: 100%;
     right: 0;
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .card__arc path {
