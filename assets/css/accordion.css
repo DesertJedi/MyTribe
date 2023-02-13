@@ -13,6 +13,14 @@
     margin-top: 5em;
 }
 
+#accordion a {
+    color: #1a1a1a;
+}
+
+#accordion i {
+    color: #333333;
+}
+
 .accordion .link {
     cursor: pointer;
     display: block;
@@ -26,6 +34,16 @@
     transition: all 0.4s ease;
 }
 
+.accordion .link:hover {
+    color: #0099CC;
+    background: #F2F2F2;
+    border-radius: 30px;
+}
+
+.accordion li {
+    color: #1a1a1a;
+}
+
 .accordion li:last-child .link { border-bottom: 0; }
 
 .accordion li i {
@@ -33,7 +51,7 @@
     /*display: inline;*/
     top: 16px;
     left: 12px;
-    font-size: 14px;
+    /*font-size: 13px;*/
     color: #1a1a1a;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -43,7 +61,7 @@
 .accordion li i.fa-chevron-down {
     right: 12px;
     left: auto;
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
 .accordion li.open .link { color: #872b2b; }
@@ -65,22 +83,27 @@
 .submenu {
     display: none;
     /*background: #eeeeee;*/
-    font-size: 13px;
-    text-align: center;
-    padding-top: 3%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
+    /*font-size: 11px;*/
+    text-align: left;
+    /*padding-top: 3%;*/
+    /*padding-bottom: 2%;*/
+    /*padding-left: 1em;*/
+    /*padding-right: 3%;*/
 }
 
-.submenu li { border-bottom: 1px solid #4b4a5e; }
+.submenu li {
+    border-bottom: 1px solid #4b4a5e;
+    font-size: 11px;
+    color: #333333;
+}
 
 .submenu a {
     display: block;
     text-decoration: none;
-    color: #1a1a1a;
-    padding: 12px;
-    padding-left: 42px;
+    color: #333333;
+    font-size: 11px;
+    /*padding: 12px;*/
+    padding-left: 1em;
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
