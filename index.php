@@ -14,7 +14,7 @@
     <link rel='stylesheet' href='assets/css/accordion.css'>
     <link rel='stylesheet' href='assets/css/cards.css'>
 
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src='vendor/jquery/jquery-3.6.3.js'></script>
     <script src='assets/js/main.js'></script>
     <script src='assets/js/accordion.js'></script>
 </head>
