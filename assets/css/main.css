@@ -18,7 +18,7 @@
 /*begin overrides*/
 
 p {
-    font-family: Arial;
+    font-family: Liberation Serif;
 }
 
 body{
@@ -39,6 +39,12 @@ li {
 }
 
 /*end overrides*/
+
+/* begin page header*/
+.page-header {
+    font-family: "Liberation Serif"
+}
+/* end page header*/
 
 /*begin anti-ad */
 #antiad {

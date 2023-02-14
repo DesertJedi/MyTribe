@@ -20,6 +20,9 @@
     <script src='assets/js/cards.js'></script>
 </head>
 <body>
+<div class='page-header'>
+    The World's First <strike>Social</strike> Care Network!
+</div>
     <div id='sticky-right'>
         <nav id='menu'>
             <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
