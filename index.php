@@ -27,6 +27,9 @@
                 <!-- TODO: When between phone width and half width not all icons are showing - make a few different view sizes so everything can be seen at any width -->
                 <!-- TODO: Scrolling from expanded Events to Groups goes past Groups so it doesn't expand - maybe fix -->
                 <div style='border-bottom: 1px solid #333333; width: 90%;'><a href='http://'>My Tribe <i class='fa fa-earth'></i></a></div>
+                    <div class='' style='margin-top: .5em;'>
+                        <i class='fa fa-search'><span class='accordion_icon_text'> &nbsp;&nbsp;Find Tribe</span></i>
+                    </div>
                     <div class='link'>
                         <i class="fa fa-drum"><span class='accordion_icon_text'> &nbsp;Gatherings</span></i>
                     </div>
@@ -36,14 +39,14 @@
                         <li>Search Gatherings</li>
                     </ul>
                     <div class='link'>
-                        <i class='fa fa-people-group' href='http://'> <span class='accordion_icon_text'> Groups</span></i>
+                        <i class='fa fa-people-group' href='http://'> <span class='accordion_icon_text'> &nbsp;Groups</span></i>
                     </div>
                     <ul class='submenu'>
                         <li>My Groups</li>
                         <li>Search <Groups></Groups></li>
                     </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-message'><span class='accordion_icon_text'> &nbsp;Chats</span></i>
+                    <i class='fa-solid fa-message'><span class='accordion_icon_text'> &nbsp;&nbsp;Chats</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>Chat 1</li>
@@ -51,14 +54,14 @@
                     <li>Chat 3</li>
                 </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-user-astronaut'><span class='accordion_icon_text'> &nbsp;My Profile</span></i>
+                    <i class='fa-solid fa-user-astronaut'><span class='accordion_icon_text'> &nbsp;&nbsp;My Profile</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>View Profile</li>
                     <li>Edit Profile</li>
                 </ul>
                 <div class='link'>
-                    <i class='fa-solid fa-hand-peace'><span class='accordion_icon_text'> &nbsp;Peace Out</span></i>
+                    <i class='fa-solid fa-hand-peace'><span class='accordion_icon_text'> &nbsp;&nbsp;Peace Out</span></i>
                 </div>
                 <ul class='submenu'>
                     <li>Sign Out</li>
