@@ -1,3 +1,4 @@
+
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {
         document.getElementById('menu').style.borderBottomRightRadius = '0';
