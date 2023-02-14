@@ -8,6 +8,7 @@ $( document ).ready(function() {
     var btnToggleTeal = $('#btn_colorToggleTeal');
     var btnToggleGrey = $('#btn_colorToggleGrey');
     var btnToggleBackgroundImage = $('#btn_backgroundImageToggle');
+    var btnCloseSettingsWindow = $('#btn_close_settings_menu');
 
     body.addClass('regular_opacity');
     settings_menu.addClass('hide_settings_menu');
@@ -16,6 +17,7 @@ $( document ).ready(function() {
     btnToggleTeal.on('click',toggle_color_teal);
     btnToggleGrey.on('click',toggle_color_grey);
     btnToggleBackgroundImage.on('click', toggle_background_image);
+    btnCloseSettingsWindow.on('click', hide_settings_menu);
 
 });
 // End listeners

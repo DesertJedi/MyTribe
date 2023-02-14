@@ -1,6 +1,6 @@
 <?php
 $body = "";
-$body .= "<div class='settings_menu_header'>My Settings</div>";
+$body .= "<div class='settings_menu_header'>My Settings<span class='btn_close'><button class='btn btn-link' id='btn_close_settings_menu'><i class='fa fa-close'></i></button></span></div>";
 
 $body .= "<div class='settings_menu_row'>";
 $body .= "<span class='settings_menu_column1'>";
@@ -43,7 +43,6 @@ $body .= "<span class='settings_menu_column1'>";
 $body .= "Post Visibility";
 $body .= "</span>";
 $body .= "<span class='settings_menu_column2'>";
-$body .= "<div class='btn-group'>";
 $body .= "<span class='btn-group-toggle'>";
 $body .= "<button class='btn btn-group-toggle toggle_buttons'  id='btn_ToggleProfileVisibility_Public'>Public</button>";
 $body .= "<button class='btn btn-group-toggle toggle_buttons' id='btn_ToggleProfileVisibility_Private'>Private</button>";
