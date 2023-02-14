@@ -22,16 +22,26 @@ p {
 }
 
 body{
-    background-image: linear-gradient(#5aebe0, #60dcd4);
-    background-image: url('/assets/images/test_images/background2.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: linear-gradient(#5aebe0, #60dcd4);*/
+    /*background-image: url('/assets/images/test_images/background2.png');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
     /*background-image: linear-gradient(#050d2b, #60dcd4);*/
     border: 10px solid transparent;
     padding: .5em;
     /*border-image: url('/assets/images/border2.png') 50 round;*/
 
 }
+
+.faded_opacity {
+    /*background-image: linear-gradient(rgba(102, 102, 102, 0.67), rgba(90, 88, 88, 0.67));*/
+    opacity: 30%;
+}
+
+.regular_opacity {
+    opacity: 100%;
+}
+
 
 li {
     list-style-type: none;
@@ -46,7 +56,104 @@ li {
     text-align: center;
     /*TODO: Find out how to change strike color*/
 }
-/* end page header*/
+#settings-cog {
+    float: right;
+    background: #dddfe9;
+    border-radius: 50%;
+    border-style: hidden;
+}
+.settings_menu {
+    /*display: none;*/
+    position: absolute;
+    margin-top: 10%;
+    width: 30em;
+    height: 20em;
+    border: 1px solid #333333;
+    background-image: linear-gradient(#e7e5e5, #cecdcd);
+    margin-left: 30%;
+    z-index: 99;
+    opacity: 100%;
+    font-family: "Liberation Serif";
+    overflow-y: auto;
+}
+.settings_menu_header {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #333333;
+    margin-bottom: .5em;
+}
+.settings_menu_row {
+    display: block;
+    padding-bottom: 2em;
+    width: 100%;
+}
+.settings_menu_column1 {
+    /*display: inline;*/
+    vertical-align: middle;
+    /*margin-left: 3em;*/
+    padding-left: 1em;
+    padding-right: 1em;
+    width: auto;
+}
+.settings_menu_column2 {
+    /*display: inline;*/
+    vertical-align: middle;
+    /*margin-left: 3em;*/
+    padding-left: 1em;
+    padding-right: 1em;
+    width: auto;
+}
+
+.theme_color_toggle {
+    width: 35px;
+    height: 35px;
+    border-style: hidden;
+    border-radius: 50%;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+.theme_color_toggle:hover {
+    border: 3px solid #4abbcf;
+}
+#btn_colorTogglePink {
+    background-color: #e83e8c;
+}
+#btn_colorToggleTeal {
+    background-color: #0099CC;
+}
+#btn_colorToggleGrey {
+    background-color: #444444;
+}
+.toggle_color_pink {
+    background-image: linear-gradient(#e83e8c, #b32d66);
+}
+.toggle_color_teal {
+    background-image: linear-gradient(#87FFF6, #54cac0);
+}
+.toggle_color_grey {
+    background-image: linear-gradient(#777272, #635f5f);
+}
+.toggle_background_image {
+    background-image: url('/assets/images/test_images/background2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.display_settings_menu{
+    display: block;
+}
+.hide_settings_menu{
+    display: none;
+}
+
+.toggle_buttons {
+    margin-left: .2em;
+}
+.toggle_buttons:hover {
+    border: 1px solid #4abbcf;
+}
 
 /*begin anti-ad */
 #antiad {

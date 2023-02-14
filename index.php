@@ -19,9 +19,14 @@
     <script src='assets/js/accordion.js'></script>
     <script src='assets/js/cards.js'></script>
 </head>
-<body>
+<body class='toggle_background_image'>
+<div id='settings-menu' class='hide_settings_menu'>
+<?php include_once('settings_menu.php'); ?>
+</div>
 <div class='page-header'>
-    YOUR <strike>Social</strike> Care Network!
+    A <strike>Social</strike> Care Network.
+    <button id='settings-cog'><i class='fa fa-cog'></i></button>
+
 </div>
     <div id='sticky-right'>
         <nav id='menu'>
