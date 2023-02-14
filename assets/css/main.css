@@ -42,7 +42,9 @@ li {
 
 /* begin page header*/
 .page-header {
-    font-family: "Liberation Serif"
+    font-family: "Liberation Serif";
+    text-align: center;
+    /*TODO: Find out how to change strike color*/
 }
 /* end page header*/
 
