@@ -1,7 +1,7 @@
 <?php
 $body = "";
 $body .= "<div class='settings_menu_header'>My Settings<span class='btn_close'><button class='btn btn-link' id='btn_close_settings_menu'><i class='fa fa-close'></i></button></span></div>";
-
+$body .= "<div class='save_btn_sticky' id='btn_save_settings'><button class='btn btn'>Save</button></div>";
 $body .= "<div class='settings_menu_row'>";
 $body .= "<span class='settings_menu_column1'>";
 $body .= "Color Theme";

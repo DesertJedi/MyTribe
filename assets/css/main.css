@@ -16,7 +16,9 @@
 /*background-image: linear-gradient(#87FFF6FF, #60dcd4);*/
 
 /*begin overrides*/
-
+* {
+    opacity: 100%;
+}
 p {
     font-family: Liberation Serif;
 }
@@ -30,6 +32,7 @@ body{
     border: 10px solid transparent;
     padding: .5em;
     /*border-image: url('/assets/images/border2.png') 50 round;*/
+
 
 }
 
@@ -56,6 +59,11 @@ li {
 }
 .btn-link:hover {
     color: #006B8F;
+}
+
+.save_btn_sticky {
+    position: sticky;
+    float: right;
 }
 /* end bootstrap overrides */
 

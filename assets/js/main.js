@@ -20,7 +20,7 @@ $( document ).ready(function() {
     btnCloseSettingsWindow.on('click', hide_settings_menu);
 
 });
-// End listeners
+// End listeners & initial classes
 
 function updatemenu() {
     if (document.getElementById('responsive-menu').checked == true) {

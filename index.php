@@ -24,6 +24,7 @@
 <?php include_once('settings_menu.php'); ?>
 </div>
 <div class='page-header'>
+    
     A <strike>Social</strike> Care Network.
     <button id='settings-cog'><i class='fa fa-cog'></i></button>
 
@@ -90,9 +91,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_1.png" alt="" /> <!-- user's profile thumb -->
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Tenderheart_Bear.png" alt="" /> <!-- user's profile thumb -->
                         <div class="card_header-text">
-                            <h3 class="card_user">Scooby Doo</h3> <!-- user's name -->
+                            <h3 class="card_user">Tenderheart Bear</h3> <!-- user's name -->
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">1 hour ago</span> <!-- time since posted -->
                         </div>
@@ -107,9 +108,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_2.png" alt="" />
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Lotsa_Heart_Elephant.png" alt="" />
                         <div class="card_header-text">
-                            <h3 class="card_user">Sandra Mann</h3>
+                            <h3 class="card_user">Lotsa Heart Elephant</h3>
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">3 hours ago</span>
                         </div>
@@ -124,9 +125,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_3.png" alt="" />
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Braveheart_Lion.png" alt="" />
                         <div class="card_header-text">
-                            <h3 class="card_user">Kenny Crewse</h3>
+                            <h3 class="card_user">Braveheart Lion</h3>
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">1 hour ago</span>
                         </div>
@@ -141,9 +142,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_1.png" alt="" /> <!-- user's profile thumb -->
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Tenderheart_Bear.png" alt="" /> <!-- user's profile thumb -->
                         <div class="card_header-text">
-                            <h3 class="card_user">Scooby Doo</h3> <!-- user's name -->
+                            <h3 class="card_user">Tenderheart Bear</h3> <!-- user's name -->
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">1 hour ago</span> <!-- time since posted -->
                         </div>
@@ -158,9 +159,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_2.png" alt="" />
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Lotsa_Heart_Elephant.png" alt="" />
                         <div class="card_header-text">
-                            <h3 class="card_user">Sandra Mann</h3>
+                            <h3 class="card_user">Lotsa Heart Elephant</h3>
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">3 hours ago</span>
                         </div>
@@ -175,9 +176,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_3.png" alt="" />
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Proud_Heart_Cat.png" alt="" />
                         <div class="card_header-text">
-                            <h3 class="card_user">Kenny Crewse</h3>
+                            <h3 class="card_user">Proud Heart Cat</h3>
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">1 hour ago</span>
                         </div>
@@ -192,9 +193,9 @@
                 <div class="card_overlay">
                     <div class="card_header">
                         <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/user_profile_thumb_1.png" alt="" /> <!-- user's profile thumb -->
+                        <img class="card_thumb" src="assets/images/test_images/profile_thumbs/Lotsa_Heart_Elephant.png" alt="" /> <!-- user's profile thumb -->
                         <div class="card_header-text">
-                            <h3 class="card_user">Scooby Doo</h3> <!-- user's name -->
+                            <h3 class="card_user">Lotsa Heart Elephant</h3> <!-- user's name -->
                             <span class="card_tagline">Lorem ipsum dolor sit amet consectetur</span>
                             <span class="card_status">1 hour ago</span> <!-- time since posted -->
                         </div>
