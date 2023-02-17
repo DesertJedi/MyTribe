@@ -1,0 +1,116 @@
+<div class="recent-tribe-updates container-fluid">
+    <div class="container">
+        <div class="row tribe-update-card-title">
+            <!--                <span class='tribe-update-card-title-text'>-->
+            <h6>Recent Tribe Updates</h6>
+            <!--                </p>-->
+        </div>
+        <div class="tribe-update-card-row row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <div class='card-photo'>
+                        <a href="single.html">
+                            <img src="assets/images/people_test_images/b1.jpg" alt="">
+                    </div>
+                    <div class="row details">
+                        <h6>Strummin' my new guitar!</h6>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b2.jpg" alt="">
+
+                        <div class="row details">
+                            <h6>Strummin' some more!</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b3.jpg" alt="">
+
+                        <div class="row details">
+                            <h6>Bum tss, bum tss, bum tss.</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tribe-update-card-row row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b1.jpg" alt="">
+
+                        <div class="row details no-margin">
+                            <h6>Strummin' my new guitar!</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b2.jpg" alt="">
+
+                        <div class="row details no-margin">
+                            <h6>Strummin' some more!</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b3.jpg" alt="">
+
+                        <div class="row details no-margin">
+                            <h6>Bum tss, bum tss, bum tss.</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tribe-update-card-row row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b1.jpg" alt="">
+                        <div class="row details no-margin">
+                            <h6>Strummin' my new guitar!</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b2.jpg" alt="">
+
+                        <div class="row details no-margin">
+                            <h6>Strummin' some more!</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="tribe-update-card">
+                    <a href="single.html">
+                        <img src="assets/images/people_test_images/b3.jpg" alt="">
+
+                        <div class="row details no-margin">
+                            <h6>Bum tss, bum tss, bum tss.</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

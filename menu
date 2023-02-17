@@ -1,0 +1,29 @@
+ <div id='sticky-right'>
+        <div id='site-logo'>
+            <p><i class='fa-solid fa-leaf'></i>My Tribe</p>
+        </div>
+        <nav id='menu'>
+            <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+            <ul>
+                <!-- TODO: When between phone width and half width not all icons are showing - make a few different view sizes so everything can be seen at any width -->
+                <!-- TODO: Scrolling from expanded Events to Groups goes past Groups so it doesn't expand - maybe fix -->
+                <li><a href='http://'>My Tribe<i class='fa-solid fa-joint navmenu_icons'></i></a></li> <!-- this is the new "Home" link -->
+                <li><a class='dropdown-arrow' href='http://'>Events & Gatherings</a>
+                    <ul class='sub-menus'>
+                        <li><a href='http://'>My Events/Gatherings</a></li>
+                        <li><a href='http://'>New Events/Gatherings</a></li>
+                        <li><a href='http://'>Search Events/Gatherings</a></li>
+                    </ul>
+                </li>
+                <li><a class='dropdown-arrow' href='http://'>Groups</a>
+                    <ul class='sub-menus'>
+                        <li><a href='http://'>My Groups</a></li>
+                        <li><a href='http://'>Search Groups</a></li>
+                    </ul>
+                </li>
+                <li><a href='http://'>Messages<i class='fa-solid fa-message navmenu_icons'></i></a></li>
+                <li><a href='http://'>My Profile<i class='fa-solid navmenu_icons fa-user-astronaut'></i></a></li>
+                <li><a href='http://'>Peace Out<i class='fa-solid navmenu_icons fa-hand-peace'></i></a></li>
+            </ul>
+        </nav>
+    </div>
