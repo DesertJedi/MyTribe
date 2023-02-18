@@ -64,15 +64,27 @@ function connect($hostname, $port, $user, $pass, $db) {
     }
 
     function delete_single_chat($dbh,$chat_id) {
+        $result = mysqli_query($dbh,"DELETE FROM `chats` where id='$chat_id'");
 
+        if($result){
+            echo "Chat $chat_id successfully deleted";
+        }
     }
 
     function delete_all_chats_from_user($dbh,$from_user_id,$to_user_id) {
-        // Deleting from user to current user
+        $result = mysqli_query($dbh,"DELETE FROM `chats` where from_user_id='$from_user_id' && to_user_id='$to_user_id'");
+
+        if($result){
+            echo "Chats from $from_user_id to $to_user_id successfully deleted";
+        }
     }
 
     function send_message($dbh,$from_user_id,$to_user_id,$message_text) {
+        $result = mysqli_query($dbh,"INSERT INTO `chats` (`from_user_id`,`to_user_id`,`chat_message`,`timestamp`) VALUES ('$from_user_id','$to_user_id','$message_text',CURRENT_TIMESTAMP())");
 
+        if($result){
+            echo "Message sent from $from_user_id to $to_user_id";
+        }
     }
 
 }
