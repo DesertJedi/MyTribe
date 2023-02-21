@@ -12,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome/sprites" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome/scss" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/fontawesome/css" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
