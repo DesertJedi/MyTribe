@@ -41,12 +41,22 @@ class db
                 echo "$user_id - $username";
             }
         }
+        $dbh->closeConnection();
     }
 
     //        END TEST QUERIES
-    function get_single_conversation($dbh,$user_id,$conversating_user) {
+    function get_list_of_active_chats($dbh,$user_id) { // Get each user that this user is sent/received messages to/from
 //        $result = mysqli_query($dbh,"SELECT * FROM `chats` where to_user_id='$user_id' || from_user_id='$user_id'");
-        $result = mysqli_query($dbh,"SELECT * FROM `chats` where to_user_id='$user_id' || from_user_id='$user_id'");
+        $result = mysqli_query($dbh,"SELECT c.`id`,c.`from_user_id`, p.display_name, p.profile_picture FROM `chats` c
+                                                   LEFT JOIN `profiles` p ON c.from_user_id = p.id
+                           where to_user_id='$user_id'");
+
+//        $dbh->closeConnection();
+        return $result;
+    }
+    function get_single_conversation($dbh,$user_id, $conversating_user) { // Get each user that this user is sent/received messages to/from
+        $result = mysqli_query($dbh,"SELECT * FROM `chats` where 
+                          from_user_id='$user_id' && to_user_id='$conversating_user'");
         $num_results = $result->num_rows;
 
         if( $num_results > 0) {
@@ -59,13 +69,12 @@ class db
                 $timestamp = $row['timestamp'];
 
 //                $key = $this->get_decrypt_key($dbh,$chat_id);
-                $decrypted_message = $this->decrypt_message($dbh,$chat_message);
+//                $decrypted_message = $this->decrypt_message($dbh,$chat_message);
 //                echo $decrypted_message;
+                echo $chat_id . "- From: " . $from_user_id . "  To: " . $user_id . "  Message: " . $chat_message . "  Timestamp: " . $timestamp . "<br />";
             }
         }
-    }
-    function get_list_of_active_chats($dbh,$user_id) { // Get each user that this user is sent/received messages to/from
-
+        $dbh->closeConnection();
     }
     function get_chats_for_user($dbh,$user_id) {
         //$current_user_id = '111AAA'; // TEST PURPOSES ONLY //
@@ -87,6 +96,7 @@ class db
 //                echo "Chat id: $chat_id - User id: $from_user_id - Message: $chat_message - Timestamp $timestamp -- ";
             }
         }
+        $dbh->closeConnection();
     }
 
 
@@ -97,6 +107,7 @@ class db
         if($result){
             echo "Chat $chat_id successfully deleted";
         }
+        $dbh->closeConnection();
     }
 
     function delete_all_chats_from_user($dbh,$from_user_id,$to_user_id) {
@@ -105,6 +116,7 @@ class db
         if($result){
             echo "Chats from $from_user_id to $to_user_id successfully deleted";
         }
+        $dbh->closeConnection();
     }
 
     function send_message($dbh,$from_user_id,$to_user_id,$message_text) {
@@ -113,6 +125,7 @@ class db
         if($result){
             echo "Message sent from $from_user_id to $to_user_id";
         }
+        $dbh->closeConnection();
     }
 
     function encrypt_message($message,$key): string
@@ -145,6 +158,7 @@ class db
         } else {
             return false;
         }
+        $dbh->closeConnection();
     }
 
     /*function get_key($dbh,$user_id) {
@@ -159,13 +173,14 @@ class db
         } // TODO: add error if unable to pull
     }*/
 
-    function add_message_key_to_db($dbh, $message_id, $key) {
-        $key = sodium_bin2hex($key);
-        $result = mysqli_query($dbh,"INSERT INTO `syek` (`message_id`,`key`) VALUES ('$message_id','$key')");
-        if ($result) {
-
-        }
-    }
+//    function add_message_key_to_db($dbh, $message_id, $key) {
+//        $key = sodium_bin2hex($key);
+//        $result = mysqli_query($dbh,"INSERT INTO `syek` (`message_id`,`key`) VALUES ('$message_id','$key')");
+//        if ($result) {
+//
+//        }
+//        $dbh->closeConnection();
+//    }
     
     function add_encrypted_message_to_db($dbh,$from_user_id,$to_user_id,$encrypted_message,$key) {
         $result = mysqli_query($dbh,"INSERT INTO `chats` (`from_user_id`,`to_user_id`,`chat_message`,`timestamp`) VALUES ('$from_user_id','$to_user_id','$encrypted_message',CURRENT_TIMESTAMP())");
@@ -177,6 +192,7 @@ class db
         } else {
             echo "Error sending message.";
         }
+        $dbh->closeConnection();
     }
 
     function send_encrypted_message($dbh,$from_user_id,$to_user_id,$message) {
@@ -192,7 +208,7 @@ class db
         $encoded_message = $this->encrypt_message($message,$key); //TODO: Add from and to user
 //        echo $encoded_message;
         $this->add_encrypted_message_to_db($dbh,$from_user_id,$to_user_id,$encoded_message,$key); // TODO: Change function to bool and to errors in this function
-
+        $dbh->closeConnection();
     }
     function get_decrypt_key($dbh,$message_id) {
         $result = mysqli_query($dbh,"SELECT `key` FROM `syek` WHERE `message_id` = '$message_id'");
@@ -206,6 +222,7 @@ class db
                 return $key;
             }
         } // TODO: add error if unable to pull
+        $dbh->closeConnection();
     }
 
     /**
@@ -223,7 +240,8 @@ class db
         if ($plaintext === false) {
             throw new Exception("Bad ciphertext");
         }
-//
+
+        $dbh->closeConnection();
         return $plaintext;
     }
 
@@ -237,6 +255,7 @@ class db
                 return $row['chat_message'];
             }
         } // TODO: add error if unable to pull
+        $dbh->closeConnection();
     }
 
     function load_chats_window_data($dbh,$user_id) {
@@ -255,9 +274,11 @@ class db
                 echo "Chat id: $chat_id - From User id: $from_user_id - Message: $chat_message - Timestamp $timestamp - Profile Pic: $profile_picture -- ";
             }
         }
+        $dbh->closeConnection();
     }
     
     function load_group_chats($dbh,$user_id) {
-
+        //TODO: finish
+        $dbh->closeConnection();
     }
 }

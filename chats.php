@@ -1,4 +1,7 @@
-<?php __DIR__ . '/assets/php/db.php';
+<?php
+require_once __DIR__ . '/assets/php/db.php';
+$db = new db();
+$dbh = $db->connect("localhost","3306","root","mysqlpw","my_tribe");
 $user_id = '111AAA';
 ?>
 <!DOCTYPE html>
@@ -15,6 +18,7 @@ $user_id = '111AAA';
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel='stylesheet' href='assets/css/chats.css'>
+    <script src='assets/js/chats.js'></script>
 </head>
 <body>
 <div class="container-fluid h-100">
@@ -30,100 +34,129 @@ $user_id = '111AAA';
                 </div>
                 <div class="card-body contacts_body">
                     <ui class="contacts">
-                        <li class="active">
+                        <?php
+                        $result = $db->get_list_of_active_chats($dbh,$user_id);
+                        $num_results = $result->num_rows;
+
+                        if( $num_results > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                        extract($row);
+
+                        $id = $row['id'];
+                        $from_user_id = $row['from_user_id'];
+                        $from_display_name = $row['display_name'];
+                        $from_thumbnail_pic = $row['profile_picture'];
+//                        $chat_message = $row['chat_message'];
+//                        $timestamp = $row['timestamp'];
+
+                        //                $key = $this->get_decrypt_key($dbh,$chat_id);
+                        //                $decrypted_message = $this->decrypt_message($dbh,$chat_message);
+                        //                echo $decrypted_message;
+
+
+
+
+
+                        ?>
+                        
+                        <li class="active side_panel_conversation">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
-                                    <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon"></span>
+                                    <img class='rounded-circle user_img' src="<?php echo $from_thumbnail_pic; ?>">
+<!--                                    <span class="online_icon offline"></span>-->
                                 </div>
                                 <div class="user_info">
-                                    <span>Khalid</span>
-                                    <p>Kalid is online</p>
+                                    <span class='user_info_header_col'></span><span class='user_info_text'><?php echo $from_display_name; ?></span>
+<!--                                    <p>4 hours ago</p>-->
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Taherah Big</span>
-                                    <p>Taherah left 7 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Sami Rafi</span>
-                                    <p>Sami is online</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="http://profilepicturesdp.com/wp-content/uploads/2018/07/sweet-girl-profile-pictures-9.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Nargis Hawa</span>
-                                    <p>Nargis left 30 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="d-flex bd-highlight">
-                                <div class="img_cont">
-                                    <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">
-                                    <span class="online_icon offline"></span>
-                                </div>
-                                <div class="user_info">
-                                    <span>Rashid Samim</span>
-                                    <p>Rashid left 50 mins ago</p>
-                                </div>
-                            </div>
-                        </li>
+                            <?php
+                            }
+                        }
+                        ?>
+<!--                        <li>-->
+<!--                            <div class="d-flex bd-highlight">-->
+<!--                                <div class="img_cont">-->
+<!--                                    <img src="https://2.bp.blogspot.com/-8ytYF7cfPkQ/WkPe1-rtrcI/AAAAAAAAGqU/FGfTDVgkcIwmOTtjLka51vineFBExJuSACLcBGAs/s320/31.jpg" class="rounded-circle user_img">-->
+<!--                                    <span class="online_icon offline"></span>-->
+<!--                                </div>-->
+<!--                                <div class="user_info">-->
+<!--                                    <span>Taherah Big</span>-->
+<!--                                    <p>Taherah left 7 mins ago</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="d-flex bd-highlight">-->
+<!--                                <div class="img_cont">-->
+<!--                                    <img src="https://i.pinimg.com/originals/ac/b9/90/acb990190ca1ddbb9b20db303375bb58.jpg" class="rounded-circle user_img">-->
+<!--                                    <span class="online_icon"></span>-->
+<!--                                </div>-->
+<!--                                <div class="user_info">-->
+<!--                                    <span>Sami Rafi</span>-->
+<!--                                    <p>Sami is online</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="d-flex bd-highlight">-->
+<!--                                <div class="img_cont">-->
+<!--                                    <img src="http://profilepicturesdp.com/wp-content/uploads/2018/07/sweet-girl-profile-pictures-9.jpg" class="rounded-circle user_img">-->
+<!--                                    <span class="online_icon offline"></span>-->
+<!--                                </div>-->
+<!--                                <div class="user_info">-->
+<!--                                    <span>Nargis Hawa</span>-->
+<!--                                    <p>Nargis left 30 mins ago</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <div class="d-flex bd-highlight">-->
+<!--                                <div class="img_cont">-->
+<!--                                    <img src="https://static.turbosquid.com/Preview/001214/650/2V/boy-cartoon-3D-model_D.jpg" class="rounded-circle user_img">-->
+<!--                                    <span class="online_icon offline"></span>-->
+<!--                                </div>-->
+<!--                                <div class="user_info">-->
+<!--                                    <span>Rashid Samim</span>-->
+<!--                                    <p>Rashid left 50 mins ago</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </li>-->
                     </ui>
                 </div>
                 <div class="card-footer"></div>
             </div></div>
-        <?php
-
-        ?>
-<!--        <div class="col-md-8 col-xl-6 chat">-->
-<!--            <div class="card">-->
-<!--                <div class="card-header msg_head">-->
-<!--                    <div class="d-flex bd-highlight">-->
-<!--                        <div class="img_cont">-->
-<!--                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">-->
+        <div class="col-md-8 col-xl-6 chat">
+            <div class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
 <!--                            <span class="online_icon"></span>-->
-<!--                        </div>-->
-<!--                        <div class="user_info">-->
-<!--                            <span>Chat with Khalid</span>-->
-<!--                            <p>1767 Messages</p>-->
-<!--                        </div>-->
+                        </div>
+                        <div class="user_info">
+                            <span>Chat with Khalid</span>
+                        </div>
 <!--                        <div class="video_cam">-->
 <!--                            <span><i class="fas fa-video"></i></span>-->
 <!--                            <span><i class="fas fa-phone"></i></span>-->
 <!--                        </div>-->
-<!--                    </div>-->
-<!--                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>-->
-<!--                    <div class="action_menu">-->
-<!--                        <ul>-->
-<!--                            <li><i class="fas fa-user-circle"></i> View profile</li>-->
-<!--                            <li><i class="fas fa-users"></i> Add to close friends</li>-->
-<!--                            <li><i class="fas fa-plus"></i> Add to group</li>-->
-<!--                            <li><i class="fas fa-ban"></i> Block</li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
+                    </div>
+                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                    <div class="action_menu">
+                        <ul>
+                            <li><i class="fas fa-user-circle"></i> View profile</li>
+                            <li><i class="fas fa-users"></i> Add to close friends</li>
+                            <li><i class="fas fa-plus"></i> Add to group</li>
+                            <li><i class="fas fa-ban"></i> Block</li>
+                        </ul>
+                    </div>
+                </div>
+        
+        
+               
+
 <!--                <div class="card-body msg_card_body">-->
 <!--                    <div class="d-flex justify-content-start mb-4">-->
 <!--                        <div class="img_cont_msg">-->
@@ -202,7 +235,7 @@ $user_id = '111AAA';
 <!--                </div>-->
 <!--            </div>-->
 <!--        </div>-->
-        <?php echo $user_id; ?>
+
     </div>
 </div>
 </body>
